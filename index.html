@@ -4,86 +4,58 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Alamedas de Santa Ana</title>
-  <link rel="stylesheet" href="/alamedas-portal/assets/styles.css" />
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
-  <script defer src="/alamedas-portal/assets/app.js"></script>
-  <script defer src="/alamedas-portal/assets/home.js"></script>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/home.js"></script>
 </head>
 <body>
-  <header class="wrap header--brand">
+  <header class="wrap">
     <h1>Alamedas de Santa Ana</h1>
     <nav>
-      <a href="/alamedas-portal/index.html">Inicio</a> ·
-      <a href="/alamedas-portal/calendario.html">Calendario</a> ·
-      <a href="/alamedas-portal/consulta.html">Consulta</a>
+      <a href="index.html">Inicio</a> ·
+      <a href="calendario.html">Calendario</a> ·
+      <a href="consulta.html">Consulta</a>
     </nav>
   </header>
 
-  <section class="hero" style="--hero-bg:url('https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg')">
-    <div class="hero__overlay"></div>
-    <div class="wrap hero__content">
+  <main class="wrap">
+    <section class="hero">
       <h2>Vive Alamedas</h2>
       <p>Condominio seguro, áreas verdes y salón social. Noticias, calendario y consulta de cuotas en un solo lugar.</p>
-      <div class="hero__actions">
-        <a class="btn" href="/alamedas-portal/calendario.html">Ver actividades</a>
-        <a class="btn btn-soft" href="/alamedas-portal/consulta.html">Consultar cuota</a>
-      </div>
-    </div>
-  </section>
+      <a class="btn" href="calendario.html">Ver actividades</a>
+      <a class="btn" href="consulta.html">Consultar cuota</a>
+    </section>
 
-  <main class="wrap">
-    <section class="card mt card--lift">
+    <section class="wrap">
       <h2>Equipo del proyecto</h2>
-      <ul>
-        <li><strong>Dairy Dallana Pernillo Salay</strong> — Carnet: <strong>0900-19-27527</strong></li>
-      </ul>
+      <p><strong>Dairy Dallana Pernillo Salay</strong> — Carnet: <strong>0900-19-27527</strong></p>
     </section>
 
-    <section class="card mt card--lift">
+    <section class="wrap">
       <h2>Sobre el residencial</h2>
-      <p>Alamedas de Santa Ana es un residencial familiar con áreas verdes, seguridad 24/7 y salón social. Desde este portal puedes leer noticias, consultar el calendario de actividades y verificar el estado de tu cuota de mantenimiento.</p>
+      <p>
+        Alamedas de Santa Ana es un residencial familiar con áreas verdes, seguridad 24/7 y salón social. 
+        Desde este portal puedes leer noticias, consultar el calendario de actividades y verificar el estado de tu cuota de mantenimiento.
+      </p>
     </section>
 
-    <section class="vitrina card mt card--lift">
-      <h2 class="vitrina__title">Residencial Alamedas</h2>
-      <div class="vitrina__grid">
-        <div>
-          <div class="vitrina__main ratio" id="main-photo" style="--img:url('https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg')"></div>
-          <div class="thumbs">
-            <button class="thumb is-active" data-src="https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg">
-              <img src="https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg" alt="Fachada">
-            </button>
-            <button class="thumb" data-src="https://www.guatemala.com/fotos/2024/09/Areas-verdes-en-la-Ciudad-de-Guatemala-885x500.jpg">
-              <img src="https://www.guatemala.com/fotos/2024/09/Areas-verdes-en-la-Ciudad-de-Guatemala-885x500.jpg" alt="Áreas verdes">
-            </button>
-            <button class="thumb" data-src="https://cdn0.bodas.com.mx/vendor/5415/3_2/960/jpg/58689328-2313994602151623-3115752435398737920-n_5_155415-157065159264364.jpeg">
-              <img src="https://cdn0.bodas.com.mx/vendor/5415/3_2/960/jpg/58689328-2313994602151623-3115752435398737920-n_5_155415-157065159264364.jpeg" alt="Salón social">
-            </button>
-          </div>
-        </div>
-        <aside class="vitrina__info">
-          <ul class="features">
-            <li>Áreas verdes</li>
-            <li>Salón social</li>
-            <li>Seguridad 24/7</li>
-            <li>Parqueo de visitas</li>
-            <li>Pet friendly</li>
-          </ul>
-          <a href="/alamedas-portal/consulta.html" class="btn">Más información</a>
-        </aside>
+    <section class="wrap">
+      <h2>Residencial Alamedas</h2>
+      <img src="https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg" alt="Fachada residencial">
+      <div class="thumbnails">
+        <img src="https://www.guatemala.com/fotos/2024/09/Areas-verdes-en-la-Ciudad-de-Guatemala-885x500.jpg" alt="Áreas verdes">
+        <img src="https://cdn0.bodas.com.mx/vendor/5415/3_2/960/jpg/58689328-2313994602151623-3115752435398737920-n_5_155415-157065159264364.jpeg" alt="Salón social">
       </div>
     </section>
 
-    <section class="card mt card--lift">
+    <section class="wrap">
       <h2>Ubicación</h2>
-      <div class="ratio">
-        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-179.99%2C-85%2C179.99%2C85&layer=mapnik" width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
-      </div>
+      <iframe src="https://www.openstreetmap.org/export/embed.html" style="width:100%; height:400px; border:0;"></iframe>
     </section>
 
-    <section class="mt">
-      <h2>Noticias recientes</h2>
-      <ul id="news-list" class="cards cards--fancy"></ul>
+    <section class="wrap">
+      <h2>Video</h2>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </section>
   </main>
 
