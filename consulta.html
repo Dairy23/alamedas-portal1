@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Consulta de inquilinos | Alamedas</title>
   <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
   <script defer src="assets/consulta.js"></script>
 </head>
 <body>
@@ -20,32 +21,27 @@
   <main class="wrap">
     <section>
       <h2>Estado de cuota del mes actual</h2>
-      <form id="consulta-form">
-        <input type="text" id="dpi" placeholder="DPI" required maxlength="13" />
-        <input type="text" id="casa" placeholder="Número de Casa" required />
-        <input type="text" id="nombre" placeholder="Primer Nombre" required />
-        <input type="text" id="apellido" placeholder="Primer Apellido" required />
-        <input type="date" id="fecha" required />
+      <form id="inquilino-form">
+        <label>DPI <input type="text" id="dpi" maxlength="13" required></label>
+        <label>Número de Casa <input type="text" id="casa" required></label>
+        <label>Primer Nombre <input type="text" id="nombre" required></label>
+        <label>Primer Apellido <input type="text" id="apellido" required></label>
+        <label>Fecha de Nacimiento <input type="date" id="fecha" required></label>
         <button type="submit">Consultar</button>
       </form>
-      <p id="estado"></p>
+      <p id="estado-cuota"></p>
     </section>
 
     <section>
       <h2>Historial de pagos</h2>
       <form id="historial-form">
-        <input type="date" id="desde" required />
-        <input type="date" id="hasta" required />
+        <label>Desde <input type="date" id="desde" required></label>
+        <label>Hasta <input type="date" id="hasta" required></label>
         <button type="submit">Buscar</button>
       </form>
       <table id="historial">
         <thead>
-          <tr>
-            <th>Fecha pago</th>
-            <th>Año</th>
-            <th>Mes</th>
-            <th>Casa</th>
-          </tr>
+          <tr><th>Fecha pago</th><th>Año</th><th>Mes</th><th>Casa</th></tr>
         </thead>
         <tbody></tbody>
       </table>
