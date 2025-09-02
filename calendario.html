@@ -4,56 +4,30 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Calendario | Alamedas</title>
-  <link rel="stylesheet" href="/alamedas-portal/assets/styles.css" />
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
-  <script defer src="/alamedas-portal/assets/calendario.js"></script>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/calendario.js"></script>
 </head>
 <body>
-  <header class="wrap header--brand">
+  <header class="wrap">
     <h1>Calendario de actividades</h1>
     <nav>
-      <a href="/alamedas-portal/index.html">Inicio</a> ·
-      <a href="/alamedas-portal/calendario.html">Calendario</a> ·
-      <a href="/alamedas-portal/consulta.html">Consulta</a>
+      <a href="index.html">Inicio</a> ·
+      <a href="calendario.html">Calendario</a> ·
+      <a href="consulta.html">Consulta</a>
     </nav>
   </header>
 
   <main class="wrap">
-    <section class="controls card mt card--lift">
-      <div class="controls-grid">
-        <div class="nav-month">
-          <button id="prev-month" class="btn btn-soft" aria-label="Mes anterior">‹</button>
-          <span id="title-month" class="title-month"></span>
-          <button id="next-month" class="btn btn-soft" aria-label="Mes siguiente">›</button>
-          <button id="today" class="btn btn-soft">Hoy</button>
-        </div>
-        <div class="pickers">
-          <label>Mes:
-            <select id="month"></select>
-          </label>
-          <label>Año:
-            <select id="year"></select>
-          </label>
-        </div>
-      </div>
+    <section>
+      <label for="mes">Mes:</label>
+      <select id="mes"></select>
+      <label for="anio">Año:</label>
+      <select id="anio"></select>
     </section>
 
-    <section class="card mt card--lift">
-      <table class="calendar" id="calendar">
-        <thead>
-          <tr><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th class="weekend">Sáb</th><th class="weekend">Dom</th></tr>
-        </thead>
-        <tbody id="calendar-body"></tbody>
-      </table>
-      <p id="no-events" class="muted mt hidden">No hay actividades en este mes.</p>
+    <section>
+      <div id="calendar"></div>
     </section>
-
-    <dialog id="event-modal">
-      <h3 id="event-title"></h3>
-      <p class="muted" id="event-date"></p>
-      <p id="event-desc"></p>
-      <button id="event-close" class="btn">Cerrar</button>
-    </dialog>
   </main>
 
   <footer class="wrap small">© 2025 Alamedas. Demo académico.</footer>
