@@ -4,68 +4,55 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Consulta de inquilinos | Alamedas</title>
-  <link rel="stylesheet" href="/alamedas-portal/assets/styles.css" />
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
-  <script defer src="/alamedas-portal/assets/consulta.js"></script>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/consulta.js"></script>
 </head>
 <body>
-  <header class="wrap header--brand">
+  <header class="wrap">
     <h1>Consulta de inquilinos</h1>
     <nav>
-      <a href="/alamedas-portal/index.html">Inicio</a> ·
-      <a href="/alamedas-portal/calendario.html">Calendario</a> ·
-      <a href="/alamedas-portal/consulta.html">Consulta</a>
+      <a href="index.html">Inicio</a> ·
+      <a href="calendario.html">Calendario</a> ·
+      <a href="consulta.html">Consulta</a>
     </nav>
   </header>
 
   <main class="wrap">
-    <section class="card mt card--lift form">
+    <section>
       <h2>Estado de cuota del mes actual</h2>
-      <form id="frm-consulta" novalidate>
-        <div class="grid">
-          <label>DPI
-            <input type="text" id="dpi" maxlength="13" placeholder="######### (13 dígitos)" required />
-          </label>
-          <label>Número de Casa
-            <input type="text" id="casa" required />
-          </label>
-          <label>Primer Nombre
-            <input type="text" id="nombre" required />
-          </label>
-          <label>Primer Apellido
-            <input type="text" id="apellido" required />
-          </label>
-          <label>Fecha de Nacimiento
-            <input type="date" id="fecha" lang="es" required />
-          </label>
-        </div>
-        <button class="btn" type="submit">Consultar</button>
+      <form id="consulta-form">
+        <input type="text" id="dpi" placeholder="DPI" required maxlength="13" />
+        <input type="text" id="casa" placeholder="Número de Casa" required />
+        <input type="text" id="nombre" placeholder="Primer Nombre" required />
+        <input type="text" id="apellido" placeholder="Primer Apellido" required />
+        <input type="date" id="fecha" required />
+        <button type="submit">Consultar</button>
       </form>
-      <div id="resultado" class="mt"></div>
+      <p id="estado"></p>
     </section>
 
-    <section class="card mt card--lift">
+    <section>
       <h2>Historial de pagos</h2>
-      <form id="frm-hist">
-        <div class="grid">
-          <label>Desde
-            <input type="date" id="desde" lang="es" />
-          </label>
-          <label>Hasta
-            <input type="date" id="hasta" lang="es" />
-          </label>
-        </div>
-        <button class="btn" type="submit">Buscar</button>
+      <form id="historial-form">
+        <input type="date" id="desde" required />
+        <input type="date" id="hasta" required />
+        <button type="submit">Buscar</button>
       </form>
-      <div class="table-wrap mt">
-        <table class="table" id="tbl-hist">
-          <thead><tr><th>Fecha pago</th><th>Año</th><th>Mes</th><th>Casa</th></tr></thead>
-          <tbody></tbody>
-        </table>
-      </div>
+      <table id="historial">
+        <thead>
+          <tr>
+            <th>Fecha pago</th>
+            <th>Año</th>
+            <th>Mes</th>
+            <th>Casa</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </section>
   </main>
 
   <footer class="wrap small">© 2025 Alamedas. Demo académico.</footer>
 </body>
 </html>
+
